@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+      <div class="card-header">
+      </div>
+      <div class="card-body">
+        <textarea readonly id="password" placeholder="Your Secure Password" value=""
+          aria-label="Generated Password"></textarea>
+      </div>
+      <div class="card-footer">
+        <div class="check-box-left">
+          <input class="check" type="checkbox" name="uppercase" id="chckUppercase" checked>
+          <label class="check-box-label">Uppercase</label><br>
+          <input type="checkbox" name="lowercase" id="chckLowercase" checked>
+          <label class="check-box-label">Lowercase</label><br>
+          <input type="checkbox" name="number" id="chckNumber" checked>
+          <label class="check-box-label">Number</label><br>
+          <input type="checkbox" name="symbol" id="chckSymbol" checked>
+          <label class="check-box-label">Symbol</label><br>
+          <label class="check-box-label">Select password length:</label><br>
+          <input type="range" min="8" max="128" value="14" class="slider" id="slider">
+          <input type="text" id="passlen" class="textbox">
+        </div>
+
+        <button id="generate" class="btn">Generate Password</button><br>
+        <button id="copy" class="btn">&nbsp; &nbsp;Copy Password &nbsp;&nbsp;</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
